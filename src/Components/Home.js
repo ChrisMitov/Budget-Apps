@@ -1,21 +1,13 @@
 import React, {Component} from 'react'
-import {GlobalContextProvider} from "../context/GlobalState";
-import Header from "./Header";
-import Balance from "./Balance";
-import AddTransaction from "./AddTransaction";
+import budget from '../budget.jpg';
 
 export default class Home extends Component {
     render() {
         return (
-            <GlobalContextProvider>
-                <div className="container1">
-                    <div className="app-wrapper">
-                        <Header/>
-                        <Balance/>
-                        <AddTransaction/>
-                    </div>
-                </div>
-            </GlobalContextProvider>
+            <div>
+                <h1>Welcome to the budget App!</h1>
+                <img src={budget} alt="Logo"/>
+            </div>
         )
     }
 }

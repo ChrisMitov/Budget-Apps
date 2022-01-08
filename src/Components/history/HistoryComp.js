@@ -28,6 +28,31 @@ const columns = [
     }
 ];
 
+const sellColumns = [
+    {
+        dataField: "expenseCompany",
+        text: "Company Name",
+        sort: true
+    },
+    {
+        dataField: "expenseShares",
+        text: "Number of shares",
+        sort: true
+    },
+    {
+        dataField: "expenseAmount",
+        text: "Product Price in $"
+    },
+    {
+        dataField: "date",
+        text: "Date",
+        formatter: (cell) => {
+            return new Date(cell).toLocaleDateString("en-US")
+        }
+    }
+];
+
+
 
 export default function HistoryComp() {
     const {buyTrades} = useContext(TradeContext);
@@ -59,7 +84,7 @@ export default function HistoryComp() {
                     bootstrap4
                     keyField="id"
                     data={sellTrades}
-                    columns={columns}
+                    columns={sellColumns}
                     striped
                     hover
                     condensed

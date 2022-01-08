@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Navbar, NavDropdown, Form, FormControl, Button, Nav } from 'react-bootstrap'
+import React, {Component} from 'react'
+import {Navbar, Nav} from 'react-bootstrap'
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,20 +10,20 @@ import {
 import Home from './Home';
 import Trades from './Trades';
 import Budget from './Budget'
-import History from "./history/history";
 import HistoryBudget from "./history/HistoryBudget";
+import History from "./history/History";
 
 export default class NavbarComp extends Component {
     render() {
         return (
             <Router>
-                <div style={{ fontSize: '20px' }}>
+                <div style={{fontSize: '20px'}}>
                     <Navbar bg="dark" variant={"dark"} expand="lg">
-                        <Navbar.Toggle aria-controls="navbarScroll" />
+                        <Navbar.Toggle aria-controls="navbarScroll"/>
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
                                 className="mr-auto my-2 my-lg-0"
-                                style={{ maxHeight: '100px' }}
+                                style={{maxHeight: '100px'}}
                                 navbarScroll
                             >
                                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
@@ -39,19 +39,19 @@ export default class NavbarComp extends Component {
                 <div>
                     <Switch>
                         <Route path="/budget">
-                            <Budget />
+                            <Budget/>
                         </Route>
                         <Route path="/trades">
-                            <Trades />
+                            <Trades/>
                         </Route>
                         <Route path="/history-budget">
-                            <HistoryBudget />
+                            <HistoryBudget/>
                         </Route>
                         <Route path="/history-shares">
-                            <History />
+                            <History/>
                         </Route>
                         <Route path="/">
-                            <Home />
+                            <Home/>
                         </Route>
                     </Switch>
                 </div>

@@ -51,12 +51,12 @@ const AddTrade = () => {
     };
 
     const [expense, setExpense] = useState({
-        expenseText: "",
+        expenseCompany: "",
         expenseShares: 0,
         expenseAmount: 0,
     });
 
-    const {expenseText, expenseShares, expenseAmount} = expense;
+    const {expenseCompany, expenseShares, expenseAmount} = expense;
 
     const onChangeExpense = (e) => {
         setExpense({...expense, [e.target.name]: e.target.value});
@@ -65,10 +65,10 @@ const AddTrade = () => {
     const onSubmitExpense = (e) => {
         e.preventDefault();
 
-        if (expenseText !== "") {
+        if (expenseCompany !== "") {
             const newExpenseTransaction = {
                 id: uuidv4(),
-                expenseText,
+                expenseCompany,
                 expenseShares: expenseShares,
                 expenseAmount: expenseAmount,
                 date: new Date(enteredDate),
@@ -77,9 +77,10 @@ const AddTrade = () => {
             sellTrade(newExpenseTransaction);
 
             setExpense({
-                expenseText: "",
+                expenseCompany: "",
                 expenseShares: 0,
                 expenseAmount: 0,
+                date: new Date(expenseDate)
             });
         }
     };
@@ -123,8 +124,8 @@ const AddTrade = () => {
                     <h3>Sell Trade</h3>
                     <input
                         type="text"
-                        name="company"
-                        value={company}
+                        name="expenseCompany"
+                        value={expenseCompany}
                         placeholder="Add company..."
                         autoComplete="off"
                         onChange={onChangeExpense}

@@ -9,7 +9,7 @@ const TradesBalance = () => {
     );
 
     const expenseAmounts = sellTrades.map(
-        sellTrade => sellTrade.expenseAmount * sellTrade.shares
+        sellTrade => sellTrade.expenseAmount * sellTrade.expenseShares
     );
 
     const totalIncome = expenseAmounts
