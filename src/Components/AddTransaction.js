@@ -7,7 +7,6 @@ const AddTransaction = () => {
 
     const [income, setIncome] = useState({
         incomeText: "",
-        incomeAmount: 0,
     });
     const [enteredDate, setEnteredDate] = useState(new Date().toISOString().replace(/T.*/, '').split('-').join('-'));
     const [expenseDate, setExpenseDate] = useState(new Date().toISOString().replace(/T.*/, '').split('-').join('-'));
@@ -49,7 +48,6 @@ const AddTransaction = () => {
 
     const [expense, setExpense] = useState({
         expenseText: "",
-        expenseAmount: 0,
     });
 
     const {expenseText, expenseAmount} = expense;

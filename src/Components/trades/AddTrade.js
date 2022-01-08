@@ -7,8 +7,6 @@ const AddTrade = () => {
 
     const [income, setIncome] = useState({
         company: "",
-        shares: 0,
-        incomeAmount: 0,
     });
     const [enteredDate, setEnteredDate] = useState(new Date().toISOString().replace(/T.*/, '').split('-').join('-'));
     const [expenseDate, setExpenseDate] = useState(new Date().toISOString().replace(/T.*/, '').split('-').join('-'));
@@ -52,8 +50,6 @@ const AddTrade = () => {
 
     const [expense, setExpense] = useState({
         expenseCompany: "",
-        expenseShares: 0,
-        expenseAmount: 0,
     });
 
     const {expenseCompany, expenseShares, expenseAmount} = expense;
