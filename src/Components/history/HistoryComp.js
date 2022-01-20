@@ -60,7 +60,7 @@ export default function HistoryComp() {
     const rowStyle = {backgroundColor: '#c8e6c9'};
 
     return (
-        <div className="container">
+        <div className="container2">
             <div className="header">
                 <h2>History of Buys </h2>
             </div>
